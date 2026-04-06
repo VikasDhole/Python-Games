@@ -4,17 +4,17 @@ def dice_rolling():
     print("\n🎲 Dice Rolling Game")
     print("=" * 30)
 
-    try:
-        rounds = int(input("How many rounds do you want to play? "))
-    except ValueError:
+    rounds_input = input("Enter number of rounds: ")
+
+    if not rounds_input.isdigit():
         print("❌ Please enter a valid number!")
         return
 
-    player_score = 0
-    computer_score = 0
+    rounds = int(rounds_input)
 
     for i in range(1, rounds + 1):
-        input("\nPress Enter to roll dice...")
+        print(f"\n--- Round {i} ---")
+        print("🎲 Rolling...")
 
         player = random.randint(1, 6)
         computer = random.randint(1, 6)
@@ -23,18 +23,10 @@ def dice_rolling():
         print(f"Computer rolled: {computer}")
 
         if player > computer:
-            print("✅ You win this round!")
-            player_score += 1
+            print("✅ You win!")
         elif computer > player:
-            print("❌ Computer wins this round!")
-            computer_score += 1
+            print("❌ Computer wins!")
         else:
-            print("🤝 It's a tie!")
+            print("🤝 Tie!")
 
-    print("\nFinal Score:")
-    print(f"You: {player_score} | Computer: {computer_score}")
-
-
-# IMPORTANT FIX
-if __name__ == "__main__":
-    dice_rolling()
+    input("\nPress Enter to return to menu...")

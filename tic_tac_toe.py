@@ -21,15 +21,23 @@ def tic_tac_toe():
 
     player = "X"
 
-    for turn in range(9):
+    while True:
         print_board()
+
         move = input(f"Player {player}, choose position (1-9): ")
 
-        if not move.isdigit() or not (1 <= int(move) <= 9):
-            print("❌ Invalid input!")
+        # Validate input
+        if not move.isdigit():
+            print("❌ Enter a number!")
             continue
 
-        move = int(move) - 1
+        move = int(move)
+
+        if move < 1 or move > 9:
+            print("❌ Choose between 1-9!")
+            continue
+
+        move -= 1
 
         if board[move] != " ":
             print("❌ Position already taken!")
@@ -37,17 +45,19 @@ def tic_tac_toe():
 
         board[move] = player
 
+        # Check winner
         if check_winner(player):
             print_board()
             print(f"🎉 Player {player} wins!")
-            return
+            break
 
+        # Check draw
+        if " " not in board:
+            print_board()
+            print("🤝 It's a draw!")
+            break
+
+        # Switch player
         player = "O" if player == "X" else "X"
 
-    print_board()
-    print("🤝 It's a draw!")
-
-
-# IMPORTANT FIX
-if __name__ == "__main__":
-    tic_tac_toe()
+    input("\nPress Enter to return to menu...")
