@@ -1,18 +1,36 @@
-# Python Games 🎮
+# 🎮 Python Games
 
-This repository contains simple Python games:
+A collection of simple Python games built for practice and learning.
 
-## Games Included
-- Dice Rolling Game 🎲
-- Rock Paper Scissors ✂️
-- Tic Tac Toe ❌⭕
+## 🚀 Games Included
 
-## How to Run ▶️
+- 🎲 Dice Rolling  
+- ✂️ Rock Paper Scissors  
+- ❌⭕ Tic Tac Toe  
+- 🔢 Number Guessing  
+- 📝 Word Guessing  
+- 🧮 Calculator  
+- 🔐 Password Generator  
+- ⏱️ Quiz Game  
+- 🎯 Hangman  
 
-Make sure Python is installed.
+## ▶️ Run Project
 
-Run any game using:
+python main.py
 
-python dice_rolling.py
-python rock_paper_scissors.py
-python tic_tac_toe.py
+## 🎮 Menu
+
+1. Dice Rolling
+2. Rock Paper Scissors
+3. Tic Tac Toe
+4. Number Guessing
+5. Word Guessing
+6. Calculator
+7. Password Generator
+8. Quiz Game
+9. Hangman
+10. Exit
+
+## 📌 Author
+
+Vikas Dhole
